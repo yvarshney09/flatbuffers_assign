@@ -1,0 +1,32 @@
+namespace ClientSchema;
+
+enum Gender: byte {
+  Male = 0,
+  Female = 1
+}
+
+table Person {
+  name: string;  // Name of the person (assumed to be unique)
+  age: float;    // Age in years
+  weight: float;  // Weight in kg
+  gender: Gender; // Gender of the person
+}
+
+table Group {
+  group_name: string;      // Group name
+  average_age: float;      // Average age of the group
+  average_weight: float;   // Average weight of the group
+  names: [string];         // List of names in the group
+}
+
+union Client {
+  Person,
+  Group
+}
+
+table AnyClient {
+  client: Client;         // The actual client data
+}
+
+root_type AnyClient;       // AnyClient is the root type
+
