@@ -18,7 +18,6 @@ flatbuffers::Offset<AnyClient> CreatePersonClient(flatbuffers::FlatBufferBuilder
 }
 
 flatbuffers::Offset<AnyClient> CreateGroupClient(flatbuffers::FlatBufferBuilder& builder) {
-    // Replace with actual data for the group
     std::string groupName = "FightClub";
     float averageAge = 24.5;
     float averageWeight = 66.0;
